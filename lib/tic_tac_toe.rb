@@ -99,9 +99,6 @@ class TicTacToe
 
   def winner
     won? {@board[won?[0]] == "X"} ? "X" : "O"
-    else
-      nil
-    end
   end
 
   def play
