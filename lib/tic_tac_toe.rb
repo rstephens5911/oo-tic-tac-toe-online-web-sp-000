@@ -107,7 +107,7 @@ class TicTacToe
     if array == false
       nil
     else
-      if @board[index[0]] == "X"
+      if @board[array[0]] == "X"
         "X"
       else
         "O"
