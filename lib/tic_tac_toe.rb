@@ -82,13 +82,13 @@ class TicTacToe
   end
 
   def full?
-    @board.include?(" " || "") ? false : true
+    @board.all? {|index| index == "X" || index == "O"}
   end
 
   def draw?
     if full? && !won?
       true
-    elsif won? || !won? || !full?
+    else
       false
     end
   end
@@ -98,8 +98,7 @@ class TicTacToe
   end
 
   def winner
-    if won?
-      (@board[won?[0]] == "X") ? "X" : "O"
+    won? {@board[won?[0]] == "X"} ? "X" : "O"
     else
       nil
     end
