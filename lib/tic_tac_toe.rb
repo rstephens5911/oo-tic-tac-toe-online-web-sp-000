@@ -48,10 +48,10 @@ class TicTacToe
     index = input_to_index(user_input)
     if valid_move?(index)
       move(index, current_player)
+      display_board
     else
       turn
     end
-    display_board
   end
 
 
@@ -77,7 +77,6 @@ class TicTacToe
       if (pos1 == "X" && pos2 == "X" && pos3 == "X" || pos1 == "O" && pos2 == "O" && pos3 == "O")
         return element
       end
-    end
     return false
   end
 
